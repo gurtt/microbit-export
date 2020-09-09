@@ -17,6 +17,13 @@ function enableRenderButton() {
     btn.disabled = false;
 }
 
+function disableRenderButton(text) {
+    btn = document.getElementById("render");
+    btn.className = "btn-working";
+    btn.innerText = text;
+    btn.disabled = true;
+}
+
 // Events
 window.addEventListener("message", function (event) {
     var msg = event.data;
@@ -41,9 +48,7 @@ window.addEventListener("message", function (event) {
 }, false);
 
 function render() {
-    btn = document.getElementById("render");
-    btn.className = "btn-working";
-    btn.disabled = true;
+    disableRenderButton("Rendering...");
 
     r.contentWindow.postMessage({
         type: "renderblocks",
