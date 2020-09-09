@@ -24,14 +24,6 @@ function disableRenderButton(text) {
     btn.disabled = true;
 }
 
-// Downloader
-function download() {
-    var a = document.createElement("a");
-    a.href = document.getElementById("preview").children[0].src;
-    a.setAttribute("download", "microbit-render.svg");
-    a.click();
-  }
-
 // Events
 window.addEventListener("message", function (event) {
     var msg = event.data;
@@ -57,6 +49,7 @@ window.addEventListener("message", function (event) {
     }
 }, false);
 
+// Button handlers
 function render() {
     disableRenderButton("Rendering...");
 
@@ -66,3 +59,10 @@ function render() {
         code: document.getElementById("code").value
     }, "https://makecode.microbit.org/");
 };
+
+function download() {
+    var a = document.createElement("a");
+    a.href = document.getElementById("preview").children[0].src;
+    a.setAttribute("download", "microbit-render.svg");
+    a.click();
+  }
