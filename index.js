@@ -23,3 +23,7 @@ window.addEventListener("message", function (event) {
             btn.disabled = false;
     }
 }, false);
+
+function render() {
+
+};
