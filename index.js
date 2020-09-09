@@ -25,5 +25,13 @@ window.addEventListener("message", function (event) {
 }, false);
 
 function render() {
+    btn = document.getElementById("render");
+    btn.className = "btn-working";
+    btn.disabled = true;
 
+    r.contentWindow.postMessage({
+        type: "renderblocks",
+        id: "0",
+        code: document.getElementById("code").value
+    }, "https://makecode.microbit.org/");
 };
