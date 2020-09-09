@@ -9,6 +9,14 @@ r.style.height = "1px";
 r.src = "https://makecode.microbit.org/--docs?render=1"
 document.body.appendChild(r);
 
+// Button state changes
+function enableRenderButton() {
+    btn = document.getElementById("render");
+    btn.className = "btn-ready";
+    btn.innerText = "Render";
+    btn.disabled = false;
+}
+
 // Events
 window.addEventListener("message", function (event) {
     var msg = event.data;
@@ -18,9 +26,7 @@ window.addEventListener("message", function (event) {
     switch (msg.type) {
         case "renderready":
             // iframe is ready to receive render requests
-            btn = document.getElementById("render");
-            btn.className = "btn-ready";
-            btn.disabled = false;
+            enableRenderButton();
         case "renderblocks":
             var svg = msg.svg; // this is an string containing SVG
             var img = document.createElement("img");
