@@ -43,6 +43,7 @@ window.addEventListener("message", function (event) {
             var preview = document.getElementById("preview");
             preview.innerHTML = "";
             preview.appendChild(img);
+            enableRenderButton();
             break;
     }
 }, false);
