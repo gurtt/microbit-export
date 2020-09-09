@@ -21,6 +21,16 @@ window.addEventListener("message", function (event) {
             btn = document.getElementById("render");
             btn.className = "btn-ready";
             btn.disabled = false;
+        case "renderblocks":
+            var svg = msg.svg; // this is an string containing SVG
+            var img = document.createElement("img");
+            img.src = msg.uri;
+            img.width = msg.width;
+            img.height = msg.height;
+            var preview = document.getElementById("preview");
+            preview.innerHTML = "";
+            preview.appendChild(img);
+            break;
     }
 }, false);
 
