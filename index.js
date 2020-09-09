@@ -18,5 +18,8 @@ window.addEventListener("message", function (event) {
     switch (msg.type) {
         case "renderready":
             // iframe is ready to receive render requests
+            btn = document.getElementById("render");
+            btn.className = "btn-ready";
+            btn.disabled = false;
     }
 }, false);
