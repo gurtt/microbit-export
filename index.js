@@ -52,6 +52,7 @@ window.addEventListener("message", function (event) {
             preview.innerHTML = "";
             preview.appendChild(img);
             enableRenderButton();
+            document.getElementById("download").disabled = false;
             break;
     }
 }, false);
