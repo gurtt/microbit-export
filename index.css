@@ -34,11 +34,7 @@ textarea {
     resize: none;
 }
 
-textarea, button {
-    border: 1px solid #8a8a8a;
-    border-radius: 2px;
-    padding: 0.5rem 1rem;
-}
+textarea, button { border: 1px solid #8a8a8a; border-radius: 2px; padding: 0.5rem 1rem; }
 
 #subtitle { color: var(--fgSecondary); }
 
@@ -71,15 +67,9 @@ button:hover, button:focus { background: var(--controlHover); }
 
 button:active { background: var(--controlActive); }
 
-@media only screen and (max-width: 50rem) {
-    main { display: block; }
+@media only screen and (max-width: 50rem) { main { display: block; } #preview { margin: 2rem 0; } }
 
-    #preview { margin: 2rem 0; }
-}
-
-@media only screen and (max-width: 72rem) {
-    header, main { margin: 1rem; }
-}
+@media only screen and (max-width: 72rem) { header, main { margin: 1rem; } }
 
 @media (prefers-color-scheme: dark) {
     :root {
