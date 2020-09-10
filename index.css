@@ -16,7 +16,7 @@ main {
 
 header, main, footer {
     max-width: 70rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     
 }
 
@@ -32,6 +32,33 @@ header, main, footer {
 textarea {
     width: 100%;
     height: 20rem;
+    font-size: 16px;
+}
+
+button {
+    font-size: 16px;
+}
+
+#subtitle {
+    color: #777;
+}
+
+#links {
+    display: inline;
+}
+
+#links li {
+    display: inline;
+    margin-right: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #007acc;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 50rem) {
@@ -43,10 +70,10 @@ textarea {
         margin-left: 0;
         margin-top: 2rem;
     }
-  }
+}
 
-  @media only screen and (max-width: 70rem) {
+@media only screen and (max-width: 72rem) {
     header, main, footer {
         margin: 1rem;
     }
-  }
+}
