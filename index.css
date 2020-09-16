@@ -63,6 +63,10 @@ button {
     -moz-appearance: none;
 }
 
+button[disabled] {
+    cursor: not-allowed;
+}
+
 button:hover, button:focus { background: var(--controlHover); }
 
 button:active { background: var(--controlActive); }
