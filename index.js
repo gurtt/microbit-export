@@ -25,6 +25,11 @@ function disableRenderButton(text) {
     btn.disabled = true;
 }
 
+function disableDownloadButton(disabled){
+    let btn = document.getElementById('download')
+    btn.disabled = disabled
+}
+
 // Events
 window.addEventListener("message", function (event) {
     var msg = event.data;
@@ -35,6 +40,9 @@ window.addEventListener("message", function (event) {
         case "renderready":
             // iframe is ready to receive render requests
             enableRenderButton();
+            disableDownloadButton(true);
+            break;
+
         case "renderblocks":
             var svg = msg.svg; // this is an string containing SVG
             var img = document.createElement("img");
@@ -45,7 +53,7 @@ window.addEventListener("message", function (event) {
             preview.innerHTML = "";
             preview.appendChild(img);
             enableRenderButton();
-            document.getElementById("download").disabled = false;
+            disableDownloadButton(false)
             break;
     }
 }, false);
@@ -53,6 +61,7 @@ window.addEventListener("message", function (event) {
 // Button handlers
 function render() {
     disableRenderButton("Rendering...");
+    disableDownloadButton(true);
 
     r.contentWindow.postMessage({
         type: "renderblocks",
