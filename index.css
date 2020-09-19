@@ -15,28 +15,15 @@ body {
   margin: 0;
 }
 
-#code {
-  font-family: Monaco, Menlo, monospace;
-}
+#code { font-family: Monaco, Menlo, monospace; }
 
-main {
-  display: flex;
-}
+main { display: flex; }
 
-header,
-main {
-  max-width: 70rem;
-  margin: 1rem auto;
-}
+header, main { max-width: 70rem; margin: 1rem auto; }
 
-#editor,
-#preview {
-  flex: 50%;
-}
+#editor, #preview { flex: 50%; }
 
-#preview {
-  margin-left: 4rem;
-}
+#preview { margin-left: 4rem; }
 
 textarea {
   width: 100%;
@@ -47,42 +34,23 @@ textarea {
   resize: none;
 }
 
-textarea,
-button {
-  border: 1px solid #8a8a8a;
-  border-radius: 2px;
-  padding: 0.5rem 1rem;
-}
+textarea, button { border: 1px solid #8a8a8a; border-radius: 2px; padding: 0.5rem 1rem; }
 
-textarea {
-  width: calc(100% - 2rem);
-}
+textarea { width: calc(100% - 2rem); }
 
-#subtitle {
-  color: var(--fgSecondary);
-}
+#subtitle { color: var(--fgSecondary); }
 
-#links {
-  display: inline;
-}
+#links { display: inline; }
 
-#links li {
-  display: inline;
-  margin-right: 1em;
-}
+#links li { display: inline; margin-right: 1em; }
 
-a {
-  text-decoration: none;
-  color: var(--themePrimary);
-}
+a { text-decoration: none; color: var(--themePrimary); }
 
-a:hover {
-  text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
 
 button {
   display: inline-block;
-  margin: 0.4rem;
+  margin: .5rem;
   margin-right: 1rem;
   text-decoration: none;
   background: none;
@@ -100,38 +68,21 @@ button[disabled] {
   cursor: not-allowed;
 }
 
-button:hover,
-button:focus {
-  background: var(--controlHover);
-}
+button:hover, button:focus { background: var(--controlHover); }
 
-button:active {
-  background: var(--controlActive);
-}
+button:active { background: var(--controlActive); }
 
-@media only screen and (max-width: 50rem) {
-  main {
-    display: block;
-  }
-  #preview {
-    margin: 2rem 0;
-  }
-}
+@media only screen and (max-width: 50rem) { main { display: block; } #preview { margin: 2rem 0; } }
 
-@media only screen and (max-width: 72rem) {
-  header,
-  main {
-    margin: 1rem;
-  }
-}
+@media only screen and (max-width: 72rem) { header, main { margin: 1rem; } }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bgPrimary: #1e1e1e;
-    --bgSecondary: #333;
-    --fgPrimary: #fff;
-    --fgSecondary: #aaa;
-    --controlHover: #fff1;
-    --controlActive: #fff2;
+      --bgPrimary: #1e1e1e;
+      --bgSecondary: #333;
+      --fgPrimary: #fff;
+      --fgSecondary: #aaa;
+      --controlHover: #fff1;
+      --controlActive: #fff2;
   }
 }
