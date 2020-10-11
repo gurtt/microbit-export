@@ -1,10 +1,12 @@
 :root {
-  --bgPrimary: #fff;
-  --fgPrimary: #000;
-  --fgSecondary: #777;
-  --themePrimary: #007acc;
-  --controlHover: #0001;
-  --controlActive: #0002;
+    --bgPrimary: #fff;
+    --fgPrimary: #000;
+    --fgSecondary: #777;
+    --themePrimary: #007acc;
+    --controlHover: #0001;
+    --controlActive: #0002;
+    --disabledBtnBg: #dddddd;
+    --disabledBtnColor: #888888;
 }
 
 body {
@@ -64,8 +66,10 @@ button {
   -moz-appearance: none;
 }
 
-button[disabled] {
-  cursor: not-allowed;
+button[disabled], button[disabled]:hover {
+    cursor: not-allowed;
+    background: var(--disabledBtnBg);
+    color: var(--disabledBtnColor);
 }
 
 button:hover, button:focus { background: var(--controlHover); }
