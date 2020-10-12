@@ -15,5 +15,21 @@
     ],
     "title": "Domains list",
     "uniqueItems": true,
-    "additionalItems": false
+    "additionalItems": false,
+    "items": {
+        "default": {},
+        "description": "A single option for MakeCode domains.",
+        "examples": [
+            [
+                {
+                    "name": "micro:bit",
+                    "domain": "makecode.microbit.org"
+                },
+                {
+                    "name": "Minecraft Code Builder",
+                    "domain": "minecraft.makecode.com"
+                }
+            ]
+        ]
+    }
 }
