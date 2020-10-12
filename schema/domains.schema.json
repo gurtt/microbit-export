@@ -46,6 +46,16 @@
                 "minLength": 1,
                 "title": "Display name",
                 "type": "string"
+            },
+            "domain": {
+                "default": "",
+                "description": "The domain hosting the MakeCode instance.",
+                "examples": [
+                    "makecode.microbit.org"
+                ],
+                "title": "Domain",
+                "minLength": 1,
+                "type": "string"
             }
         },
         "additionalProperties": false
