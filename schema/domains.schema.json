@@ -1,0 +1,63 @@
+{
+    "default": [],
+    "description": "A list of domains using MakeCode and supporting the document render engine.",
+    "examples": [
+        [
+            {
+                "name": "micro:bit",
+                "domain": "makecode.microbit.org"
+            },
+            {
+                "name": "Minecraft Code Builder",
+                "domain": "minecraft.makecode.com"
+            }
+        ]
+    ],
+    "title": "Domains list",
+    "uniqueItems": true,
+    "additionalItems": false,
+    "items": {
+        "default": {},
+        "description": "A single option for MakeCode domains.",
+        "examples": [
+            [
+                {
+                    "name": "micro:bit",
+                    "domain": "makecode.microbit.org"
+                },
+                {
+                    "name": "Minecraft Code Builder",
+                    "domain": "minecraft.makecode.com"
+                }
+            ]
+        ],
+        "required": [
+            "name",
+            "domain"
+        ],
+        "title": "Domain option",
+        "properties": {
+            "name": {
+                "default": "",
+                "description": "Shown in the list of domain options.",
+                "examples": [
+                    "micro:bit"
+                ],
+                "minLength": 1,
+                "title": "Display name",
+                "type": "string"
+            },
+            "domain": {
+                "default": "",
+                "description": "The domain hosting the MakeCode instance.",
+                "examples": [
+                    "makecode.microbit.org"
+                ],
+                "title": "Domain",
+                "minLength": 1,
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    }
+}
