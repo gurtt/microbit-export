@@ -30,6 +30,24 @@
                     "domain": "minecraft.makecode.com"
                 }
             ]
-        ]
+        ],
+        "required": [
+            "name",
+            "domain"
+        ],
+        "title": "Domain option",
+        "properties": {
+            "name": {
+                "default": "",
+                "description": "Shown in the list of domain options.",
+                "examples": [
+                    "micro:bit"
+                ],
+                "minLength": 1,
+                "title": "Display name",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
     }
 }
